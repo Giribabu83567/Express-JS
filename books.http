@@ -1,0 +1,35 @@
+
+POST http://localhost:4523/addBook
+Content-Type: application/json
+
+{
+    "id" : 5,
+    "title" : "Harry Potter The Water",
+    "authorName" : "Potter",
+    "rating" : 4.7,
+    "ratingCount" : 27,
+    "reviewCount" : 58,
+    "description" : "Adventure",
+    "pages" : 704,
+    "dateOfPublish" : "2012-05-14",
+    "editionLanguage" : "English, Telugu",
+    "price" : 2039,
+    "onlineStores" : "Flipkart"
+}
+
+###
+GET http://localhost:4523/books/2/
+
+###
+PUT http://localhost:4523/update-books/4/
+Content-Type: application/json
+
+{
+    "onlineStores" : "Amazon"
+}
+
+###
+DELETE http://localhost:4523/delete-book/5/
+
+###
+GET http://localhost:4523/filter-books/?search_q=Potter
